@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>merkle-patricia-trie viz</title>
+        <!-- data-main attribute tells require.js to load
+             scripts/main.js after require.js loads. -->
+        <!--
+        <script data-main="scripts/main" src="scripts/require.js"></script>
+        -->
+        <script type="text/javascript" src="https://d3js.org/d3.v5.min.js"></script>
+        <script type="text/javascript" src="https://rawgit.com/cdetrio/merkle-patricia-tree/viz/dist/secure.js"></script>
+        <script type="text/javascript" src="scripts/ethereumjs-util@5.2.0.js"></script>
+        <script type="text/javascript" src="scripts/ethereumjs-account@2.0.5.js"></script>
+        <script type="text/javascript" src="scripts/rlp@2.2.3"></script>
+        <script type="text/javascript" src="./bower_components/async/dist/async.js"></script>
+        <script type="text/javascript" src="scripts/safe-buffer@5.1.1.js"></script>
+        <script type="text/javascript" src="scripts/main.js"></script>
+        <style>
+          body {
+              background-color: #404040;
+              color: #FFFFFF;
+          }
+          .node circle {
+              fill: #FFF;
+          }
+
+          .node text {
+              fill: #FFF;
+              font: 10px sans-serif;
+          }
+
+          .node--internal circle {
+              fill: #FFF;
+          }
+
+          .node--internal text {
+              fill: #FFFFFF;
+              text-shadow: 0 1px 0 #fff, 0 -1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff;
+          }
+          
+          .link {
+              fill: none;
+              stroke: #555;
+              stroke-opacity: 0.4;
+              stroke-width: 1.5px;
+          }
+
+          .legend {
+              fill: #FFF;
+          }
+        </style>
+    </head>
+    <body onload="showStuff()">
+      <h1>merkle-patricia-trie viz</h1>
+      <h3>Account State Data</h3>
+      <div>
+        <pre id="state1">
+        </pre>
+      </div>
+      <h3>render the trie</h3>
+      <div id="viz"></div>
+
+      <h3>log</h3>
+      <div>
+        <pre id="log"></pre>
+      </div>
+    </body>
+</html>
