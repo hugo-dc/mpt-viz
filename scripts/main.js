@@ -551,7 +551,7 @@ function showStuff () {
   pre.innerHTML = JSON.stringify(StateData, undefined, 2)
 
   initStateTree(StateData).then(stateTrieObj => {
-    console.log('StateTrie: ', stateTrieObj)
+    //console.log('StateTrie: ', stateTrieObj)
     return exportTrieToD3NodesProm(stateTrieObj)
   }).then(d3Data => {
     cout('exportTrieToD3NodesProm returned d3Data:', d3Data)

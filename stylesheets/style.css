@@ -1,0 +1,34 @@
+/*
+body {
+    background-color: #404040;
+    color: #FFFFFF;
+}
+*/
+.node circle {
+    fill: #000;
+}
+
+.node text {
+    fill: #000;
+    font: 10px sans-serif;
+}
+
+.node--internal circle {
+    fill: #000;
+}
+
+.node--internal text {
+    fill: #000;
+    text-shadow: 0 1px 0 #fff, 0 -1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff;
+}
+
+.link {
+    fill: none;
+    stroke: #555;
+    stroke-opacity: 0.4;
+    stroke-width: 1.5px;
+}
+
+.legend {
+    fill: #000;
+}
